@@ -1072,8 +1072,8 @@ func (ss *Sim) SleepCyc(c [][]float64, stage string, cycles int) {
 	// Loop for the 30,000 cycle sleep trial
 	for cyc := 0; cyc < cycles; cyc++ { // 10000
 
-		inp.SndPrjns.RecvName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.025
-		out.RcvPrjns.SendName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.025
+		inp.SndPrjns.RecvName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.1
+		out.RcvPrjns.SendName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.1
 
 		inp.SndPrjns.RecvName("DG").(*hip.CHLPrjn).Learn.Learn = false
 		inp.SndPrjns.RecvName("DG").(*hip.CHLPrjn).Learn.Learn = false
@@ -1281,8 +1281,8 @@ func (ss *Sim) SleepCyc(c [][]float64, stage string, cycles int) {
 			}
 		}
 
-		inp.SndPrjns.RecvName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.025
-		out.RcvPrjns.SendName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.025
+		inp.SndPrjns.RecvName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.1
+		out.RcvPrjns.SendName("CTX").(*hip.CHLPrjn).Learn.Lrate = 0.1
 
 		inp.SndPrjns.RecvName("DG").(*hip.CHLPrjn).Learn.Learn = true
 		inp.SndPrjns.RecvName("CA3").(*hip.CHLPrjn).Learn.Learn = true
